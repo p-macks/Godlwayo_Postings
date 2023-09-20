@@ -1,0 +1,16 @@
+{%extends 'base/index.html'%}
+{%load static %}
+<br>
+ {% block content %}
+
+ <center>
+     <a href="{% url 'index' %} " class="btn btn-primary" id="">&#8592; Go Back</a>
+     <br><hr>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token%}
+        {{form.as_p}}
+        <button type="submit"  class="btn btn-lg btn-success md-5">Submit</button>
+    </form>
+</center>
+
+{% endblock content %}

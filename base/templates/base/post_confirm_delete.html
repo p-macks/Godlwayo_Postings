@@ -1,0 +1,14 @@
+{%extends 'base/index.html'%}
+{%load static %}
+<br>
+ {% block content %}
+ <a href="{% url 'post_list' %}" class="btn btn-primary">&#8592; Go Back</a>
+ <hr>
+ <div class="card w-75">
+  <div class="card-body">
+    <p>Are you sure you want to delete, {{post.title}}</p>
+    <hr>
+    <button type="submit" class="btn btn-lg btn-danger md-5">Yes, Delete</button>
+  </div>
+</div>
+{% endblock content%}
